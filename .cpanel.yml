@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/yuniwirh/public_html/islamLibrary
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp * $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
