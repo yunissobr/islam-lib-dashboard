@@ -1,19 +1,30 @@
 <?php
 // DB Params
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'islamLib');
+$debug = false;
 
-// App Root
-define('APPROOT', dirname(dirname(__FILE__)));
-// URL Root
-define('URLROOT', 'http://127.0.0.1/islamLib/');
-// Site Name
-define('SITENAME', 'IslamLib Dashboard');
+if ($debug) {
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
+    define('DB_NAME', 'islamLib');
 
+    define('APPROOT', dirname(dirname(__FILE__)));
+    define('URLROOT', 'http://127.0.0.1/islamLib/');
+    define('SITENAME', 'IslamLib Dashboard');
+    define('ROOT', dirname(dirname(dirname(__FILE__))));
+} else {
 
-define('ROOT', dirname(dirname(dirname(__FILE__))));
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'yuniwirh_islamLibAdmin');
+    define('DB_PASS', 'islamLibAdmin');
+    define('DB_NAME', 'yuniwirh_islamLib');
+
+    define('APPROOT', dirname(dirname(__FILE__)));
+    define('URLROOT', 'https://yuniss.com/islamLibrary/');
+    define('SITENAME', 'IslamLib Dashboard');
+    define('ROOT', dirname(dirname(dirname(__FILE__))));
+}
+
 
 
 
